@@ -9,14 +9,22 @@
 /*   Updated: 2026/02/03 14:58:01 by ciparren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdarg.h>
+#include "printf.h"
 
-int ft_printf_s(va_list args)
+static size_t	ft_strlen(const char *s)
 {
-    char    *str;
+	size_t	i;
 
-    str = va_arg(args, char *);
-    write(1, &str, ft_strlen(str));
+	i = 0;
+	while (s[i])
+	{
+		i++;
+	}
+	return (i);
+}
 
-    return ft_strlen(str);
+int	ft_printf_s(char	*str)
+{
+	write(1, str, ft_strlen(str));
+	return (ft_strlen(str));
 }

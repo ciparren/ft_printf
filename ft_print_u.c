@@ -9,11 +9,9 @@
 /*   Updated: 2026/02/03 14:58:01 by ciparren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdarg.h>
+#include "printf.h"
 
-int ft_print_u(va_list args)
+int	ft_print_u(va_list args)
 {
-    
-
-    return 0;
+	return (0);
 }

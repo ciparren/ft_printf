@@ -9,45 +9,29 @@
 /*   Updated: 2026/02/03 14:58:01 by ciparren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdarg.h>
+#include "printf.h"
 
-static void aux(int n, int mod, int *len)
+int	ft_print_d(int n)
 {
-    char    c;
+	long	nbr;
+	char	c;
+	int	len;
 
-    if (n == 0)
-    {
-        c = (n % 10) + '0';
-	    write(1, &c, 1);
-    }
-    else
-    	aux(n / 10, n % 10, len);
-	
-}
-
-
-int ft_print_d(int n)
-{
-    long	nbr;
-   	char	c;
-    int *len;
-
+	len = 0;
 	nbr = n;
 	if (nbr < 0)
 	{
 		write(1, "-", 1);
-        len++;
 		nbr = -nbr;
 	}
-    aux(n, 0, &len);
+	if (nbr >= 10)
+	{
+		//len++;
+		len += ft_print_d(nbr / 10);
+	}
+	c = (nbr % 10) + '0';
+	write(1, &c, 1);
+	len++;
 
-    return  (len);
-}
-
-
-// este es mi putnbr
-
-int	ft_putnbr_fd(int n, int fd)
-{
-	
+	return	(len);
 }

@@ -9,19 +9,20 @@
 /*   Updated: 2026/02/03 14:58:01 by ciparren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdarg.h>
+#include "printf.h"
 
-int ft_print_x(long int n, char *base)
+
+int	ft_print_x(unsigned int n, char *base)
 {
-    int		len;
+	int	len;
 
 	len = 0;
 	if (n < 16)
 	{
-        write(1, &base[n % 16], 1);
-	    len++;
+		write(1, &base[n % 16], 1);
+		len++;
 	}
-	else    
-   		len += ft_print_hex(n / 16, base);	
+	else
+		len += ft_print_x(n / 16, base);
 	return (len);
 }

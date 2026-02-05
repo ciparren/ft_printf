@@ -12,9 +12,9 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdarg.h>  
-# include <unistd.h>  
-# include <stdlib.h>  
+# include <stdarg.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int	ft_printf(const char *format, ...);
 
@@ -22,8 +22,9 @@ int	ft_what_to_print(va_list args, char c);
 int	ft_print_c(int c);
 int	ft_print_s(char *str);
 int	ft_print_p(void *ptr);
-int	ft_print_i(int n);
+int	ft_print_d(int n);
 int	ft_print_u(unsigned int n);
-int	ft_print_x(unsigned int n, char *base);
+int	ft_print_x(unsigned long int n, char *base);
+int ft_putchar(int c);
 
 #endif
