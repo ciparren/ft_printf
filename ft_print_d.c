@@ -11,34 +11,43 @@
 /* ************************************************************************** */
 #include <stdarg.h>
 
-int ft_print_d(const char *format, ...)
+static void aux(int n, int mod, int *len)
 {
-    va_list args;
-    int  i;
-    int total_len;
+    char    c;
 
-    i = 0;
-    total_len = 0;
-    va_start(args, format);
-    while(format[i])
+    if (n == 0)
     {
-        if(format[i] == '%')
-        {
-            i++;
-            // función fernando dispatch
-            ft_what_to_print(format[i]);
-            // total_len?
-        }
-        else
-        {
-            ft_printchar(format[i]);
-            total_len++;
-        }
+        c = (n % 10) + '0';
+	    write(1, &c, 1);
     }
+    else
+    	aux(n / 10, n % 10, len);
+	
+}
 
 
+int ft_print_d(int n)
+{
+    long	nbr;
+   	char	c;
+    int *len;
 
-    va_end(args);
+	nbr = n;
+	if (nbr < 0)
+	{
+		write(1, "-", 1);
+        len++;
+		nbr = -nbr;
+	}
+    aux(n, 0, &len);
 
-    return total_len;
+    return  (len);
+}
+
+
+// este es mi putnbr
+
+int	ft_putnbr_fd(int n, int fd)
+{
+	
 }

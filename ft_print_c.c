@@ -9,14 +9,9 @@
 /*   Updated: 2026/02/03 14:58:01 by ciparren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdarg.h>
 
-int ft_printf_c(va_list args)
+int ft_printf_c(char c)
 {
-    char    c;
-
-    c = va_arg(args, char);
     write(1, &c, 1);
-
     return 1;
 }

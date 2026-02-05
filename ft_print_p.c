@@ -11,13 +11,9 @@
 /* ************************************************************************** */
 #include <stdarg.h>
 
-int ft_print_p(va_list args)
+int ft_print_p(void *p)
 {
-    void    *ptr;
     int len;
-
-    ptr = va_arg(args, void *)
-
         
-    return total_len;
+    return (len);
 }

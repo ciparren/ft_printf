@@ -25,7 +25,6 @@ int ft_printf(const char *format, ...)
         if(format[i] == '%')
         {
             i++;
-            // función fernando dispatch
             total_len += ft_what_to_print(args);
             // total_len?
         }
