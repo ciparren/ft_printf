@@ -1,0 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_x_X.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ciparren <ciparren@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/03 14:57:59 by ciparren          #+#    #+#             */
+/*   Updated: 2026/02/03 14:58:01 by ciparren         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <stdarg.h>
+
+int ft_print_x(long int n, char *base)
+{
+    int		len;
+
+	len = 0;
+	if (n < 16)
+	{
+        write(1, &base[n % 16], 1);
+	    len++;
+	}
+	else    
+   		len += ft_print_hex(n / 16, base);	
+	return (len);
+}
