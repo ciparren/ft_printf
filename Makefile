@@ -12,7 +12,7 @@
 
 NAME        = libftprintf.a
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror
+CFLAGS      = -Wall -Wextra -Werror -g
 AR          = ar rcs
 RM          = rm -f
 

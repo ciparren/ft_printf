@@ -11,18 +11,14 @@
 /* ************************************************************************** */
 #include "printf.h"
 
-
 int	ft_print_x(unsigned int n, char *base)
 {
 	int	len;
 
 	len = 0;
-	if (n < 16)
-	{
-		write(1, &base[n % 16], 1);
-		len++;
-	}
-	else
+	if (n >= 16)
 		len += ft_print_x(n / 16, base);
+	ft_putchar(base[n % 16]);
+	len++;
 	return (len);
 }

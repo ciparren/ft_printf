@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "printf.h"
 
-int	ft_print_u(va_list args)
+int	ft_print_u(unsigned int ui)
 {
 	return (0);
 }
