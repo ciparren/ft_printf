@@ -1,12 +1,12 @@
 #include <limits.h> // Para INT_MAX, INT_MIN, etc.
 #include "printf.h"
-
+#include <stdio.h>
 int	main(void)
 {
 	int	ret_ft;
 	int	ret_org;
-	//int	num = 42;
-	//int	*ptr = &num;
+	int	num = 42;
+	int	*ptr = &num;
 
 	printf("\n========== TEST 1: CARACTERES Y STRINGS (%%c, %%s) ==========\n");
 	
@@ -38,10 +38,10 @@ int	main(void)
 	printf("Org: %d, %d\n", INT_MAX, INT_MIN);
 
 	// 3. Unsigned (%%u)
-	/*
+	
 	ft_printf("Mio: %u (positivo), %u (negativo casteado)\n", 1234, -5);
 	printf("Org: %u (positivo), %u (negativo casteado)\n", 1234, -5);
-*/
+
 
 	printf("\n========== TEST 3: HEXADECIMAL Y PUNTEROS (%%x, %%X) ==========\n");
 
@@ -54,7 +54,7 @@ int	main(void)
 	printf("Org: %x\n", 0);
 
 	// 3. Punteros (%%p)
-	/*
+	
 	ft_printf("Mio: %p\n", ptr);
 	printf("Org: %p\n", ptr);
 
@@ -63,7 +63,7 @@ int	main(void)
 	// tu ft_printf debe imitar lo que haga el printf de tu ordenador.
 	ft_printf("Mio: %p\n", NULL);
 	printf("Org: %p\n", NULL);
-	*/
+	
 
 	printf("\n========== TEST 4: PORCENTAJE Y MIXTO (%%, mixto) ==========\n");
 
@@ -75,6 +75,12 @@ int	main(void)
 	ret_ft = ft_printf("Mio: El numero %d en hex es %x y la letra es %c\n", 42, 42, 'Z');
 	ret_org = printf("Org: El numero %d en hex es %x y la letra es %c\n", 42, 42, 'Z');
 	printf("Longitud -> Mio: %d | Org: %d\n", ret_ft, ret_org);
+
+	// Añade más pruebas para %u con valores extremos:
+	ft_printf("Mio: %u\n", 0);
+	printf("Org: %u\n", 0);
+	ft_printf("Mio: %u\n", 4294967295u);
+	printf("Org: %u\n", 4294967295u);
 	
 	printf("\n========== FIN DEL TEST ==========\n");
 

@@ -16,6 +16,11 @@ int	ft_print_p(void *ptr)
 	unsigned long	addr;
 	int				len;
 
+	if (ptr == NULL)
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
 	len = 0;
 	addr = (unsigned long)ptr;
 	write(1, "0x", 2);

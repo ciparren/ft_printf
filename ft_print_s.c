@@ -23,7 +23,7 @@ static size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_printf_s(char	*str)
+int	ft_print_s(char	*str)
 {
 	if (!str)
 	{

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "printf.h"
 
-int	ft_print_x(unsigned int n, char *base)
+int	ft_print_x(unsigned long n, char *base)
 {
 	int	len;
 
