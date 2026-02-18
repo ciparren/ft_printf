@@ -11,12 +11,15 @@
 /* ************************************************************************** */
 #include "printf.h"
 
-int	ft_print_p(unsigned long int *p)
+int	ft_print_p(void *ptr)
 {
-	int	len;
+	unsigned long	addr;
+	int				len;
 
+	len = 0;
+	addr = (unsigned long)ptr;
 	write(1, "0x", 2);
 	len += 2;
-	len +=ft_print_x((unsigned int)p, "0123456789abcdef");
+	len += ft_print_x(addr, "0123456789abcdef");
 	return (len);
 }
