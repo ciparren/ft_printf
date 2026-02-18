@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_s.c                                        :+:      :+:    :+:   */
+/*   ft_print_s.c                                        :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ciparren <ciparren@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -23,7 +23,7 @@ static size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_print_s(char	*str)
+int	ft_print_s(char *str)
 {
 	if (!str)
 	{

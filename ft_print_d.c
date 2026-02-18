@@ -35,7 +35,7 @@ int	ft_print_d(int n)
 	if (n < 0)
 	{
 		write(1, "-", 1);
-		nbr = -(long long)n;  // Seguro para INT_MIN (usando long long)
+		nbr = -(long long)n;
 		len++;
 	}
 	else

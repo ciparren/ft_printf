@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_p.c                                        :+:      :+:    :+:   */
+/*   ft_print_p.c                                        :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ciparren <ciparren@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,8 +13,8 @@
 
 int	ft_print_p(void *ptr)
 {
-	unsigned long	addr;
 	int				len;
+	unsigned long	addr;
 
 	if (ptr == NULL)
 	{
